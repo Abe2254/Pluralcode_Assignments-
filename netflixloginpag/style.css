@@ -1,0 +1,444 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  font-family: Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+  color: white;
+}
+header {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(img/netflixpic.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+  padding: auto;
+}
+.logo {
+  position: relative;
+  top: -50%;
+}
+/* .logo a img {
+  width: 15rem;
+  
+  position: absolute;
+  top: 20%;
+
+} */
+.logo img {
+  width: 150px;
+  position: absolute;
+  left: 20%;
+  /* bottom: 430px;
+  right: 70%; */
+}
+/* FOr the whole form */
+.form1 {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  height: 780px;
+  margin: 100px auto;
+  border: 0px #000;
+  width: 470px;
+  margin-top: 200px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 4px;
+  position: relative;
+  padding: 50px;
+  z-index: 2;
+}
+.move {
+  margin-top: -150px;
+}
+
+/* for the Sign in text */
+.move h1 {
+  padding-bottom: 30px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+/* for the email input */
+input[type="text"] {
+  width: 300px;
+  padding: 15px;
+  color: #fff;
+  font-size: 17.2px;
+  font-weight: 500;
+  border: 0.09px solid #ccc;
+  border-radius: 5px;
+  background-color: rgba(128, 128, 128, 0.1);
+  margin-bottom: -5px;
+}
+/* this is for when you tap on the email input  */
+input[type="text"]:focus {
+  border-color: #fff;
+  border: 2px solid #fff;
+  background-color: rgba(128, 128, 128, 0.2);
+  outline: none;
+}
+/* for the password input */
+input[type="password"] {
+  width: 300px;
+  padding: 15px;
+  color: #fff;
+  font-size: 17.2px;
+  font-weight: 500;
+  border: 0.09px solid #ccc;
+  border-radius: 5px;
+  background-color: rgba(128, 128, 128, 0.1);
+  margin-bottom: -5px;
+}
+/* this for when to tap on the password input */
+input[type="password"]:focus {
+  border-color: #fff;
+  background-color: rgba(128, 128, 128, 0.2);
+  border: 2px solid #fff;
+  outline: none;
+}
+form p {
+  text-align: center;
+  padding: 15px 15px;
+  color: rgba(255, 255, 255, 0.7);
+}
+/* For the buttons */
+form button {
+  width: 300px;
+  display: inline-flex;
+  justify-content: center;
+  padding: 12px 7px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  background-color: black;
+  border: 1px solid dimgray;
+  border-radius: 5px;
+  font-family: Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+  cursor: pointer;
+}
+button.Sign-In {
+  background-color: rgb(229, 9, 20);
+}
+
+form button.Sign-In:hover {
+  background-color: rgba(229, 9, 20, 0.8);
+  transition: 0.4s ease-in-out;
+  color: #fff;
+}
+hr {
+  opacity: 0;
+}
+button.Use {
+  background-color: rgba(128, 128, 128, 0.4);
+}
+form button.Use:hover {
+  background-color: rgba(128, 128, 128, 0.3);
+  transition: 0.4s ease-in-out;
+}
+/* for everything in the forgot password section */
+.bottom {
+  padding: 15px 15px;
+}
+.Remember {
+  padding-right: 190px;
+}
+.new {
+  padding-right: 130px;
+}
+.captcha {
+  padding-right: 60px;
+}
+/* .down {
+  position: absolute;
+  margin-top: -370px;
+  margin-left: 42%;
+  padding: 10px 10px;
+} */
+/* for the forgot password  */
+/* .bottom {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  margin-top: -10px;
+} */
+.bottom a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.bottom :hover {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: underline;
+}
+
+/* Hide the default checkbox */
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.custom-checkbox {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border: 0.3px solid rgba(255, 255, 255, 0.7);
+  position: relative;
+  border-radius: 4px; /* Optional: For rounded corners */
+}
+
+/* Style for the checkmark (tick) */
+.custom-checkbox::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 6px;
+  top: 2px;
+  width: 3px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* When the checkbox is checked */
+input[type="checkbox"]:checked + .custom-checkbox {
+  background-color: white;
+}
+
+/* Show the checkmark (tick) when the checkbox is checked */
+input[type="checkbox"]:checked + .custom-checkbox::after {
+  display: block;
+  border-color: black;
+}
+
+/* Optional: Increase the clickable area */
+label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 18px; /* Optional: Increase font size for label */
+}
+
+.custom-checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.Remember {
+  margin-bottom: 15px;
+}
+.new {
+  margin-bottom: 15px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.new p a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+/* Style for small */
+
+small {
+  color: rgba(255, 255, 255, 0.7);
+}
+small a {
+  color: #0071eb;
+  text-decoration: none;
+}
+.a:hover {
+  text-decoration: underline;
+}
+/* Styling for the footer  */
+.topfooter {
+  padding: 100px 25%;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+
+  /* background-color: red; */
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.1),
+    black
+  );
+}
+footer {
+  padding: 20px 0;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  clear: both;
+}
+.topfooter a {
+  color: rgba(255, 255, 255, 0.7);
+}
+.topfooter ul {
+  list-style: none;
+}
+.top {
+  margin-top: -43px;
+}
+.top ul span p a {
+  text-decoration: none;
+}
+.top ul span p a:hover {
+  text-decoration: underline;
+}
+
+.top ul span p {
+  margin-bottom: 20px;
+}
+@media (max-width: 600px) {
+  .topfooter {
+    display: flex;
+    padding: 100px 3%;
+    margin-top: 150px;
+  }
+  .form1 {
+    height: 87vh;
+    margin-top: 350px;
+  }
+  .logo img {
+    width: 95px;
+  }
+  .move {
+    margin-top: 100px;
+  }
+  header {
+    height: 70vh;
+  }
+}
+@media (max-width: 960px) {
+  .topfooter {
+    display: flex;
+    padding: 100px 4%;
+  }
+  header {
+    height: 100vh;
+  }
+  .form1 {
+    margin-top: 200px;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+  }
+  .move {
+    margin-top: 50px;
+  }
+}
+@media (max-width: 599px) {
+  header {
+    background: #000;
+    width: 100%;
+    height: 50vh;
+  }
+  .form1 {
+    width: 100%;
+    position: relative;
+    margin-top: 63%;
+    /* padding-top: 35%; */
+    background: transparent;
+    height: 40vh;
+  }
+  .move {
+    width: 100%;
+    margin-bottom: 5%;
+  }
+
+  input[type="text"] {
+    width: 100%;
+  }
+  input[type="password"] {
+    width: 100%;
+  }
+  form button {
+    width: 100%;
+  }
+  hr {
+    opacity: 1;
+    position: relative;
+    margin-top: 70%;
+    background-color: rgba(255, 255, 255, 0.7);
+    height: 0.5px;
+    border: none;
+  }
+}
+@media (max-width: 480px) {
+  form button {
+    width: 100%;
+  }
+  input[type="text"] {
+    width: 100%;
+  }
+  input[type="password"] {
+    width: 100%;
+  }
+  .move {
+    margin-top: 28%;
+    width: 100%;
+  }
+  .form1 {
+    width: 100%;
+    position: relative;
+    margin-top: 63%;
+    /* padding-top: 35%; */
+    background: transparent;
+    height: 40vh;
+    z-index: 1;
+  }
+
+  header {
+    background: #000;
+    width: 100%;
+    height: 50vh;
+  }
+  .topfooter {
+    display: grid;
+    grid-template-columns: 2 1fr;
+  }
+  .logo {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+  }
+  .move {
+    margin-top: 150px;
+    justify-content: center;
+  }
+  .Remember {
+    align-items: center;
+    padding-right: 100px;
+  }
+}
+@media (max-width: 450px) {
+  .form1 {
+    position: relative;
+    margin-top: 70%;
+    height: 30vh;
+  }
+  header {
+    height: 65vh;
+  }
+}
+@media (max-width: 320px) {
+  .Remember {
+    padding-right: 50px;
+  }
+}
