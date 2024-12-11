@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense and Income Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div>
+          <h1>King's I/E Tracker</h1>
+          <!-- <h4>Toggle button</h4>
+          <button id="button">Open</button>
+        </div> -->
+      </nav>
+      <div class="total">
+        <h4>Total Balance: <span id="balance"> &#8358;0 </span></h4>
+      </div>
+      <div class="tracker">
+        <div>
+          <h4>Income</h4>
+          <span id="income">&#8358;0 </span>
+        </div>
+        <div>
+          <h4>Expenses</h4>
+          <span id="expenses">&#8358;0 </span>
+        </div>
+      </div>
+
+      <form id="expense-form">
+        <div class="select"> <label for="">Select type : </label>
+        <select id="type" required>
+          <option value="income">Income</option>
+          <option value="expense">Expense</option>
+        </select></div>
+        <div>  <label for="">Description :
+     </label>   <input
+          type="text"
+          id="description"
+          placeholder="Add description"
+          required
+        /></div>
+
+      
+       
+        <div> <label for="">Date : </label> <input type="date" id="date" required />
+      </div>
+       <div>
+        <label for="">Time :</label>
+        <input type="time" id="time" required />
+        
+    </div>
+    <div> <label for="">Amount</label>
+        <input type="number" id="amount" placeholder="Amount" required /></div>
+           
+      
+        <button type="submit">Submit</button>
+      </form>
+      <div>
+        <h3>Transaction History</h3>
+        <ul id="transaction">
+          No record
+        </ul>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
