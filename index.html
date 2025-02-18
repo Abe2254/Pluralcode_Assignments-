@@ -9,59 +9,51 @@
   <body>
     <div class="container">
       <nav>
-        <div>
-          <h1>King's I/E Tracker</h1>
-          <!-- <h4>Toggle button</h4>
-          <button id="button">Open</button>
-        </div> -->
+        <h1>King's I/E Tracker</h1>
       </nav>
       <div class="total">
-        <h4>Total Balance: <span id="balance"> &#8358;0 </span></h4>
+        <h4>Total Balance: <span id="balance">₦0</span></h4>
       </div>
       <div class="tracker">
         <div>
           <h4>Income</h4>
-          <span id="income">&#8358;0 </span>
+          <span id="income">₦0</span>
         </div>
         <div>
           <h4>Expenses</h4>
-          <span id="expenses">&#8358;0 </span>
+          <span id="expenses">₦0</span>
         </div>
       </div>
-
       <form id="expense-form">
-        <div class="select"> <label for="">Select type : </label>
-        <select id="type" required>
-          <option value="income">Income</option>
-          <option value="expense">Expense</option>
-        </select></div>
-        <div>  <label for="">Description :
-     </label>   <input
-          type="text"
-          id="description"
-          placeholder="Add description"
-          required
-        /></div>
-
-      
-       
-        <div> <label for="">Date : </label> <input type="date" id="date" required />
-      </div>
-       <div>
-        <label for="">Time :</label>
-        <input type="time" id="time" required />
-        
-    </div>
-    <div> <label for="">Amount</label>
-        <input type="number" id="amount" placeholder="Amount" required /></div>
-           
-      
+        <div class="select">
+          <label for="type">Select type:</label>
+          <select id="type" required>
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+          </select>
+        </div>
+        <div>
+          <label for="description">Description:</label>
+          <input type="text" id="description" placeholder="Add description" required />
+        </div>
+        <div>
+          <label for="date">Date:</label>
+          <input type="date" id="date" required />
+        </div>
+        <div>
+          <label for="time">Time:</label>
+          <input type="time" id="time" required />
+        </div>
+        <div>
+          <label for="amount">Amount:</label>
+          <input type="number" id="amount" placeholder="Amount" required />
+        </div>
         <button type="submit">Submit</button>
       </form>
       <div>
         <h3>Transaction History</h3>
         <ul id="transaction">
-          No record
+          <li>No record</li>
         </ul>
       </div>
     </div>
